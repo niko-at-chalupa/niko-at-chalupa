@@ -1,5 +1,3 @@
-## Hi there 👋
-
 <!--
 **niko-at-chalupa/niko-at-chalupa** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
