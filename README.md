@@ -23,4 +23,8 @@ Here are some ideas to get you started:
 </div>
 
 # Hello!!
-i'm Niko, programmer from 
+i'm Niko, programmer/student who's into ~~web development~~ *(mostly backend)*, game development and other *(fun)* stuff!
+
+i like to make things for myself, as i don't know te proper way to do things, so most of my projects are just experiments and learning experiences.
+
+i really like to make my stuff modular and reusable, so if you find something useful, feel free to use it in your own projects *(please)*!!
