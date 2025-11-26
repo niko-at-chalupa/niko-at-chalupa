@@ -15,19 +15,33 @@ Here are some ideas to get you started:
 
 # Hello!!
 
-<img src="profile.png" width=50% align="right" style="margin: 7px"/>
-
-<div align="left">
-
 <div align="center">
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
 
+</div> 
+
+<div width=50% style="float: right; width: 50%"> <!--RIGHT-->
+
+<img src="profile2.png" style="margin: 7px"/>
+
+<a href="https://discord.gg/K3dEasVp" target="_blank">
+<img src="contactme.png" style="width: 70%; float: right" alt="Contact me!!"/>
+</a>
+
+i really like Kasane Teto \<3
+
+<div style="clear: both;"></div>
+
+
+
 </div>
 
-i'm <img src="niko.png" style="display: inline; height: 1.5em; vertical-align: middle" alt="Niko">, programmer/student who's into ~~web development~~ *(mostly backend)*, game development and other *(fun)* stuff!
+<div style="float: left; width: 50%"> <!--LEFT-->
 
-i like to make things for myself, as i don't know te proper way to do things, so most of my projects are just experiments and learning experiences.
+i'm <img src="niko.png" style="display: inline; height: 1.5em; vertical-align: text-bottom" alt="Niko">, programmer/student who's into **web development** *(mostly backend)*, **game development** and **other** *(fun)* **stuff**!
 
-i really like to make my stuff modular and reusable, so if you find something useful, feel free to use it in your own projects *(please)*!! 
+i like to make things for myself, as i don't know the proper way to do things, so most of my projects are just experiments
 
+the stuff i make is usually modular, so you can use parts of it in your own projects!
+</div>
