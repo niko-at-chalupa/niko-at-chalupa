@@ -21,27 +21,12 @@ Here are some ideas to get you started:
 
 </div> 
 
-<div width=50% style="float: right; width: 50%"> <!--RIGHT-->
-
-<img src="profile2.png" style="margin: 7px"/>
-
-<a href="https://discord.gg/K3dEasVp" target="_blank">
-<img src="contactme.png" style="width: 70%; float: right" alt="Contact me!!"/>
-</a>
-
-i really like Kasane Teto \<3
-
-<div style="clear: both;"></div>
-
-
-
-</div>
-
-<div style="float: left; width: 50%"> <!--LEFT-->
+<img src="profile2.png" width=49% align="right"/>
 
 i'm <img src="niko.png" style="display: inline; height: 1.5em; vertical-align: text-bottom" alt="Niko">, programmer/student who's into **web development** *(mostly backend)*, **game development** and **other** *(fun)* **stuff**!
 
 i like to make things for myself, as i don't know the proper way to do things, so most of my projects are just experiments
 
 the stuff i make is usually modular, so you can use parts of it in your own projects!
-</div>
+
+<img src="contactme.png" width=20% align="right"/>
