@@ -13,8 +13,11 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-<img src="profile.png" width=50% align="left" style="margin: 7px"/>
+# Hello!!
 
+<img src="profile.png" width=50% align="right" style="margin: 7px"/>
+
+<div align="left">
 
 <div align="center">
 
@@ -22,9 +25,9 @@ Here are some ideas to get you started:
 
 </div>
 
-# Hello!!
-i'm Niko, programmer/student who's into ~~web development~~ *(mostly backend)*, game development and other *(fun)* stuff!
+i'm <img src="niko.png" style="display: inline; height: 1.5em; vertical-align: middle" alt="Niko">, programmer/student who's into ~~web development~~ *(mostly backend)*, game development and other *(fun)* stuff!
 
 i like to make things for myself, as i don't know te proper way to do things, so most of my projects are just experiments and learning experiences.
 
-i really like to make my stuff modular and reusable, so if you find something useful, feel free to use it in your own projects *(please)*!!
+i really like to make my stuff modular and reusable, so if you find something useful, feel free to use it in your own projects *(please)*!! 
+
