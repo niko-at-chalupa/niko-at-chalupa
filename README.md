@@ -42,8 +42,8 @@ i'm <code><img src="niko.png" style="display: inline; height: 1.7em; vertical-al
 ---
 
 <div align="center">
-<a href="https://discord.gg/3aq69Bg7cf"><img src="contactme.png" alt="Contact me on Discord" width=30%/></a> 
-width=30%/></a>
+<a href="https://discord.gg/3aq69Bg7cf"><img src="contactme.png" alt="Contact me on Discord" width=30%/>
+</a>
 
 <code>
 i'm <code>niko_at_chalupa</code>
