@@ -17,9 +17,17 @@ Here are some ideas to get you started:
 <div align="center">
 <strong>what i use</strong>
 <details>
-<summary> <u><i>Programming languages</i></u> </summary>
+<summary> <u><i>Languages I know (ranked by how much I use them)</i></u> </summary>
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS](https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white) ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![Swift](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)
+| Rank | Language | Proficiency | Use Cases |
+|------|----------|-------------|-----------|
+| 1 | ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) | ⭐⭐⭐⭐⭐ | Scripting, and mostly everything |
+| 2 | ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white) | ⭐⭐⭐⭐ | Roblox Studio|
+| 3 | ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) | ⭐⭐⭐⭐ | Web development, frontend |
+| 4 | ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) | ⭐⭐⭐ | Web markup |
+| 5 | ![CSS](https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white) | ⭐⭐⭐ | Web styling |
+| 6 | ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white) | ⭐ | Still learning |
+
 </details>
 
 <details>
@@ -55,8 +63,3 @@ on discord
 <br />
 <br />
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=niko-at-chalupa&theme=github-compact" />
-
-
-<div align="center">
-    <p><i>I love python!!</i></p>
-</div>
