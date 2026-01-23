@@ -43,6 +43,14 @@ Here are some ideas to get you started:
 
 ---
 
+<br />
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=niko-at-chalupa&theme=github-compact" />
+
+<br />
+
+---
+
 <img src="profile3.png" width=49% align="right"/>
 
 i'm <code><img src="niko.png" style="display: inline; height: 1.7em; vertical-align: text-top; vertical-align: -0.5em;" alt="Niko"></code>, programmer/student who's into **web development** *(mostly backend)*, **game development** and **other stuff**!
@@ -52,7 +60,7 @@ i'm <code><img src="niko.png" style="display: inline; height: 1.7em; vertical-al
 <div align="center">
 <a href="https://discord.gg/3aq69Bg7cf"><img src="contactme.png" alt="Contact me on Discord" width=30%/>
 </a>
-
+<br />
 <code>
 i'm <code>niko_at_chalupa</code>
 on discord
@@ -62,4 +70,3 @@ on discord
 <br />
 <br />
 <br />
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=niko-at-chalupa&theme=github-compact" />
