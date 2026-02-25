@@ -14,7 +14,7 @@ Here are some ideas to get you started:
 -->
 
 # Hello!!
-<div align="center">
+<!-- <div align="center">
 <strong>what i use</strong>
 <details>
 <summary> <u><i>Languages I know (ranked by how much I use them)</i></u> </summary>
@@ -41,7 +41,7 @@ Here are some ideas to get you started:
 
 <br />
 
----
+--- -->
 
 <br />
 
