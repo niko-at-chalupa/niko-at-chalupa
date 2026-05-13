@@ -266,6 +266,12 @@ function animate() {
 // Setup mousedown listeners for each window to initiate dragging
 windowElements.forEach(el => {
     el.addEventListener('mousedown', (e) => {
+        // If the user is clicking an anchor tag (link) or something inside it, 
+        // we don't want to start a drag operation. This allows links to be clickable.
+        if (e.target.closest('a')) {
+            return;
+        }
+
         const state = windowStates.find(s => s.el === el);
         draggedState = state;
         state.isDragging = true;

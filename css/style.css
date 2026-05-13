@@ -163,8 +163,32 @@ body::-webkit-scrollbar {
 .attribution-footer a {
   color: var(--generic-window-accent);
   text-decoration: none;
+  /* Ensure links are relatively positioned for the hitbox pseudo-element */
+  position: relative;
 }
 
 .attribution-footer a:hover {
   text-decoration: underline;
+}
+
+/* 
+   Hitbox Expansion:
+   We use a pseudo-element to increase the clickable area of links without 
+   affecting the document flow or visual styling. This makes links easier 
+   to click on smaller windows or high-resolution displays.
+*/
+.code-area a, .attribution-footer a {
+    position: relative;
+}
+
+.code-area a::before, .attribution-footer a::before {
+    content: "";
+    position: absolute;
+    /* Expand the hitbox by 10px in every direction */
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    /* Ensure the pseudo-element is transparent but still captures pointer events */
+    background: transparent;
 }
