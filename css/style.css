@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
   --hypr-rounding: 10px;
   --hypr-gaps: 10px;
   
-  --generic-window-bg: #1e1e2e;
+  --generic-window-bg: rgba(17, 11, 31, 0.8); /* Ghostty background (110b1f) with 0.8 opacity */
   --generic-window-text: #cdd6f4;
   --generic-window-accent: #ae84cf;
 }
@@ -52,9 +52,55 @@ body::-webkit-scrollbar {
   cursor: grab;
   user-select: none; /* Prevent text selection during drag */
   
+  /* Apply blurred background for a modern, glass-like effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
   /* Initial transition for state changes, JS handles movement */
   transition: border-color 0.4s cubic-bezier(0.23, 1, 0.32, 1), 
               box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Ghostty-inspired Terminal Window */
+.terminal-window {
+  background: rgba(17, 11, 31, 0.6) !important; /* background = 110b1f, background-opacity = 0.6 */
+  font-family: 'MesloLGS NF', 'JetBrains Mono', monospace !important; /* font-family = "MesloLGS NF" */
+}
+
+.terminal-content {
+  padding: 15px;
+  color: #cdd6f4;
+  font-size: 14px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.terminal-line {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.prompt {
+  color: #89b4fa;
+  font-weight: bold;
+}
+
+.path {
+  color: #a6e3a1;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 18px;
+  background-color: #cdd6f4;
+  vertical-align: middle;
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
 }
 
 .generic-window-window:active {
