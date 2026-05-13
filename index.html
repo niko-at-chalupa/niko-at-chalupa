@@ -8,42 +8,27 @@
 </head>
 <body>
     <!-- Full viewport tiling workspace -->
-    <div class="tiling-workspace">
-        <!-- Root node of the dwindle layout -->
-        <div class="tiling-node horizontal">
-            <!-- Window 1: Occupies the left half -->
-            <div class="generic-window-window window-entry">
-                <main class="generic-window-editor">
-                    <div class="code-area"></div>
-                </main>
-            </div>
-            
-            <!-- Right half container -->
-            <div class="tiling-node vertical">
-                <!-- Window 2: Occupies the top right quadrant -->
-                <div class="generic-window-window window-entry">
-                    <main class="generic-window-editor">
-                        <div class="code-area"></div>
-                    </main>
-                </div>
-                
-                <!-- Bottom right container -->
-                <div class="tiling-node horizontal">
-                    <!-- Window 3: Occupies the bottom middle sector -->
-                    <div class="generic-window-window window-entry">
-                        <main class="generic-window-editor">
-                            <div class="code-area"></div>
-                        </main>
-                    </div>
-                    
-                    <!-- Window 4: Occupies the bottom far-right sector -->
-                    <div class="generic-window-window window-entry">
-                        <main class="generic-window-editor">
-                            <div class="code-area"></div>
-                        </main>
-                    </div>
-                </div>
-            </div>
+    <div id="workspace" class="tiling-workspace">
+        <!-- Windows are now managed by js/tiling.js -->
+        <div class="generic-window-window window-entry" id="win-1">
+            <main class="generic-window-editor">
+                <div class="code-area"></div>
+            </main>
+        </div>
+        <div class="generic-window-window window-entry" id="win-2">
+            <main class="generic-window-editor">
+                <div class="code-area"></div>
+            </main>
+        </div>
+        <div class="generic-window-window window-entry" id="win-3">
+            <main class="generic-window-editor">
+                <div class="code-area"></div>
+            </main>
+        </div>
+        <div class="generic-window-window window-entry" id="win-4">
+            <main class="generic-window-editor">
+                <div class="code-area"></div>
+            </main>
         </div>
     </div>
 
@@ -51,5 +36,7 @@
     <div class="content-below">
         <!-- More content can be added here -->
     </div>
+
+    <script src="js/tiling.js"></script>
 </body>
 </html>
