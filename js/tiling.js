@@ -339,6 +339,52 @@ window.addEventListener('mouseup', () => {
 // Handle window resizing to keep the tiling layout consistent with the viewport size
 window.addEventListener('resize', updateTargets);
 
+// --- Page Transition Logic ---
+
+/**
+ * Adds the exit animation class to all windows.
+ */
+function triggerExitAnimation() {
+    windowStates.forEach(state => {
+        state.el.classList.remove('window-entry');
+        state.el.classList.add('window-exit');
+    });
+}
+
+/**
+ * Intercepts link clicks to play the exit animation before navigating.
+ * This provides a smooth transition when moving between pages in the site.
+ */
+document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (link && 
+        link.href && 
+        link.getAttribute('target') !== '_blank' && 
+        !e.metaKey && !e.ctrlKey && !e.shiftKey && !e.altKey) {
+        
+        // Only intercept internal links to avoid delaying external navigation
+        const url = new URL(link.href);
+        if (url.origin === window.location.origin) {
+            e.preventDefault();
+            triggerExitAnimation();
+            
+            // Navigate after the animation duration (matched with CSS: 0.3s)
+            setTimeout(() => {
+                window.location.href = link.href;
+            }, 300);
+        }
+    }
+});
+
+/**
+ * Fallback for other ways of leaving the page (refresh, browser buttons).
+ * While we can't delay these, adding the class immediately can sometimes
+ * show the start of the animation before the page unloads.
+ */
+window.addEventListener('beforeunload', () => {
+    triggerExitAnimation();
+});
+
 // --- Boot ---
 initTree();
 updateTargets();

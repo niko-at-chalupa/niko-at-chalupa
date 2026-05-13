@@ -118,8 +118,13 @@ body::-webkit-scrollbar {
 }
 
 .window-entry {
-  /* Increased duration to 0.8s to make the opacity fade-in feel smoother and "longer" */
-  animation: popin 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  /* Snappy entrance animation */
+  animation: popin 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.window-exit {
+  /* Exit animation set to 1.2x the length of the entrance (0.25s * 1.2 = 0.3s) */
+  animation: popout 0.3s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
 @keyframes popin {
@@ -130,6 +135,12 @@ body::-webkit-scrollbar {
   0% { transform: scale(0.97); opacity: 0; }
   /* Finish at natural size and full visibility. */
   100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes popout {
+  /* Reverse of popin: shrink slightly and fade out. */
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.97); opacity: 0; }
 }
 
 .generic-window-editor {
