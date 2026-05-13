@@ -39,11 +39,9 @@ body {
   animation: popin 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 :root {
-  --kwrite-bg: #1e1e2e;         /* Match your terminal background */
+  --kwrite-bg: #1e1e2e;
   --kwrite-text: #cdd6f4;
-  --kwrite-gutter-text: #6c7086;
-  --kwrite-accent: #ae84cf;     /* Your 'ae84cfee' active border */
-  --kwrite-header: #181825;
+  --kwrite-accent: #ae84cf;
 }
 
 .kwrite-window {
@@ -51,8 +49,8 @@ body {
   max-width: 750px;
   margin: 40px auto;
   background: var(--kwrite-bg);
-  border: 2px solid var(--kwrite-header); /* Inactive border fallback */
-  border-radius: 10px;         /* Your 'rounding = 10' */
+  border: 2px solid rgba(49, 50, 68, 0.67);
+  border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -60,70 +58,17 @@ body {
   transition: border-color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* Make the border light up on hover, matching your Hyprland logic */
 .kwrite-window:hover {
   border-color: var(--kwrite-accent);
 }
 
-.title-bar {
-  background: var(--kwrite-header);
-  padding: 10px 15px;
-  display: flex;
-  justify-content: center; /* KWrite often centers title text */
-  position: relative;
-}
-
-.window-controls {
-  position: absolute;
-  left: 15px;
-  display: flex;
-  gap: 8px;
-}
-
-.window-title {
-  font-size: 13px;
-  color: #a6adc8;
-  font-weight: 500;
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 8px;
-}
-
-.dot:nth-child(1) {
-  background-color: #ff5f57;
-}
-
-.dot:nth-child(2) {
-  background-color: #ffbd2e;
-}
-
-.dot:nth-child(3) {
-  background-color: #28ca42;
-}
-
 .kwrite-editor {
   display: flex;
-  padding: 20px 10px;
+  padding: 20px;
   line-height: 1.6;
 }
 
-.line-numbers {
-  width: 40px;
-  text-align: right;
-  padding-right: 20px;
-  color: var(--kwrite-gutter-text);
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
-  user-select: none;
-  font-size: 13px;
-}
-
 .code-area {
-  padding-left: 20px;
   flex-grow: 1;
   font-size: 14px;
   color: var(--kwrite-text);
