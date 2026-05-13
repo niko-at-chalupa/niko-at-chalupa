@@ -51,14 +51,14 @@ Here are some ideas to get you started:
 
 ---
 
-<img src="profile3.png" width=49% align="right"/>
+<img src="images/profile3.png" width=49% align="right"/>
 
-i'm <code><img src="niko.png" style="display: inline; height: 1.7em; vertical-align: text-top; vertical-align: -0.5em;" alt="Niko"></code>, programmer/student who's into **web development** *(mostly backend)*, **game development** and **other stuff**!
+i'm <code><img src="images/niko.png" style="display: inline; height: 1.7em; vertical-align: text-top; vertical-align: -0.5em;" alt="Niko"></code>, programmer/student who's into **web development** *(mostly backend)*, **game development** and **other stuff**!
 
 ---
 
 <div align="center">
-<a href="https://discord.gg/3aq69Bg7cf"><img src="contactme.png" alt="Contact me on Discord" width=30%/>
+<a href="https://discord.gg/3aq69Bg7cf"><img src="images/contactme.png" alt="Contact me on Discord" width=30%/>
 </a>
 <br />
 <code>
