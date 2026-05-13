@@ -39,16 +39,16 @@ body {
   animation: popin 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 :root {
-  --kwrite-bg: #1e1e2e;
-  --kwrite-text: #cdd6f4;
-  --kwrite-accent: #ae84cf;
+  --generic-window-bg: #1e1e2e;
+  --generic-window-text: #cdd6f4;
+  --generic-window-accent: #ae84cf;
 }
 
-.kwrite-window {
+.generic-window-window {
   width: 90%;
   max-width: 750px;
   margin: 40px auto;
-  background: var(--kwrite-bg);
+  background: var(--generic-window-bg);
   border: 2px solid rgba(49, 50, 68, 0.67);
   border-radius: 10px;
   overflow: hidden;
@@ -58,11 +58,11 @@ body {
   transition: border-color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.kwrite-window:hover {
-  border-color: var(--kwrite-accent);
+.generic-window-window:hover {
+  border-color: var(--generic-window-accent);
 }
 
-.kwrite-editor {
+.generic-window-editor {
   display: flex;
   padding: 20px;
   line-height: 1.6;
@@ -71,7 +71,7 @@ body {
 .code-area {
   flex-grow: 1;
   font-size: 14px;
-  color: var(--kwrite-text);
+  color: var(--generic-window-text);
 }
 
 /* Syntax Highlighting */
