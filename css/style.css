@@ -2,6 +2,135 @@ body {
   background-color: #151217;
 }
 
-* {
-  border-color: #ddb9f8 !important;
+:root {
+  --active-border: #ae84cf; 
+  --inactive-border: rgba(49, 50, 68, 0.67); 
+  --hypr-rounding: 10px;
+  --hypr-gaps: 20px;
 }
+
+.window {
+  margin: var(--hypr-gaps);
+  border: 2px solid var(--inactive-border);
+  border-radius: var(--hypr-rounding);
+  
+  background: #1f1e33; /* Darker background to match Catppuccin feel */
+  backdrop-filter: blur(8px); /* Matches your 'size = 8' */
+  
+  transition: border-color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.window:hover {
+  border-color: var(--active-border);
+}
+
+/* This matches your 'easeOutQuint, 0.23, 1, 0.32, 1' */
+.hypr-animate {
+  transition: all 0.47s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* For that 'popin 87%' effect you have in windowsIn */
+@keyframes popin {
+  0% { transform: scale(0.87); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.window-entry {
+  animation: popin 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+:root {
+  --kwrite-bg: #1e1e2e;         /* Match your terminal background */
+  --kwrite-text: #cdd6f4;
+  --kwrite-gutter-text: #6c7086;
+  --kwrite-accent: #ae84cf;     /* Your 'ae84cfee' active border */
+  --kwrite-header: #181825;
+}
+
+.kwrite-window {
+  width: 90%;
+  max-width: 750px;
+  margin: 40px auto;
+  background: var(--kwrite-bg);
+  border: 2px solid var(--kwrite-header); /* Inactive border fallback */
+  border-radius: 10px;         /* Your 'rounding = 10' */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  transition: border-color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Make the border light up on hover, matching your Hyprland logic */
+.kwrite-window:hover {
+  border-color: var(--kwrite-accent);
+}
+
+.title-bar {
+  background: var(--kwrite-header);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: center; /* KWrite often centers title text */
+  position: relative;
+}
+
+.window-controls {
+  position: absolute;
+  left: 15px;
+  display: flex;
+  gap: 8px;
+}
+
+.window-title {
+  font-size: 13px;
+  color: #a6adc8;
+  font-weight: 500;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.dot:nth-child(1) {
+  background-color: #ff5f57;
+}
+
+.dot:nth-child(2) {
+  background-color: #ffbd2e;
+}
+
+.dot:nth-child(3) {
+  background-color: #28ca42;
+}
+
+.kwrite-editor {
+  display: flex;
+  padding: 20px 10px;
+  line-height: 1.6;
+}
+
+.line-numbers {
+  width: 40px;
+  text-align: right;
+  padding-right: 20px;
+  color: var(--kwrite-gutter-text);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  user-select: none;
+  font-size: 13px;
+}
+
+.code-area {
+  padding-left: 20px;
+  flex-grow: 1;
+  font-size: 14px;
+  color: var(--kwrite-text);
+}
+
+/* Syntax Highlighting */
+.comment { color: #6c7086; font-style: italic; }
+.keyword { color: #cba6f7; }
+.func { color: #89b4fa; }
+.str { color: #a6e3a1; }
