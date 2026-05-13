@@ -72,11 +72,17 @@ body::-webkit-scrollbar {
 }
 
 .window-entry {
-  animation: popin 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  /* Increased duration to 0.8s to make the opacity fade-in feel smoother and "longer" */
+  animation: popin 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 @keyframes popin {
-  0% { transform: scale(0.87); opacity: 0; }
+  /* 
+     Start at 0.97 scale to achieve approx 15px of growth on a standard window.
+     Opacity starts at 0 and fades in over the course of the 0.8s animation.
+  */
+  0% { transform: scale(0.97); opacity: 0; }
+  /* Finish at natural size and full visibility. */
   100% { transform: scale(1); opacity: 1; }
 }
 
