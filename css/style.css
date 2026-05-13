@@ -1,71 +1,77 @@
 body {
   background-color: #151217;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 :root {
   --active-border: #ae84cf; 
   --inactive-border: rgba(49, 50, 68, 0.67); 
   --hypr-rounding: 10px;
-  --hypr-gaps: 20px;
-}
-
-.window {
-  margin: var(--hypr-gaps);
-  border: 2px solid var(--inactive-border);
-  border-radius: var(--hypr-rounding);
+  --hypr-gaps: 10px; /* Reduced for tiling */
   
-  background: #1f1e33; /* Darker background to match Catppuccin feel */
-  backdrop-filter: blur(8px); /* Matches your 'size = 8' */
-  
-  transition: border-color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.window:hover {
-  border-color: var(--active-border);
-}
-
-/* This matches your 'easeOutQuint, 0.23, 1, 0.32, 1' */
-.hypr-animate {
-  transition: all 0.47s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-/* For that 'popin 87%' effect you have in windowsIn */
-@keyframes popin {
-  0% { transform: scale(0.87); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-.window-entry {
-  animation: popin 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-}
-:root {
   --generic-window-bg: #1e1e2e;
   --generic-window-text: #cdd6f4;
   --generic-window-accent: #ae84cf;
 }
 
+/* Tiling Workspace */
+.tiling-workspace {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  box-sizing: border-box;
+  padding: var(--hypr-gaps);
+}
+
+/* Recursive tiling nodes */
+.tiling-node {
+  display: flex;
+  flex: 1;
+  gap: var(--hypr-gaps);
+}
+
+.tiling-node.horizontal {
+  flex-direction: row;
+}
+
+.tiling-node.vertical {
+  flex-direction: column;
+}
+
+/* Window Styling */
 .generic-window-window {
-  width: 90%;
-  max-width: 750px;
-  margin: 40px auto;
+  flex: 1;
   background: var(--generic-window-bg);
-  border: 2px solid rgba(49, 50, 68, 0.67);
-  border-radius: 10px;
+  border: 2px solid var(--inactive-border);
+  border-radius: var(--hypr-rounding);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
   transition: border-color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  box-sizing: border-box;
 }
 
 .generic-window-window:hover {
   border-color: var(--generic-window-accent);
 }
 
+.window-entry {
+  animation: popin 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes popin {
+  0% { transform: scale(0.87); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
 .generic-window-editor {
   display: flex;
   padding: 20px;
   line-height: 1.6;
+  height: 100%;
 }
 
 .code-area {
@@ -74,8 +80,9 @@ body {
   color: var(--generic-window-text);
 }
 
-/* Syntax Highlighting */
-.comment { color: #6c7086; font-style: italic; }
-.keyword { color: #cba6f7; }
-.func { color: #89b4fa; }
-.str { color: #a6e3a1; }
+/* Placeholder for content below the fold */
+.content-below {
+  min-height: 500px;
+  padding: 40px;
+  color: white;
+}

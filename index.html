@@ -7,13 +7,49 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="generic-window-window window-entry">
-  <!-- Main Content Area -->
-  <main class="generic-window-editor">
-    <div class="code-area">
-      <pre><code></code></pre>
+    <!-- Full viewport tiling workspace -->
+    <div class="tiling-workspace">
+        <!-- Root node of the dwindle layout -->
+        <div class="tiling-node horizontal">
+            <!-- Window 1: Occupies the left half -->
+            <div class="generic-window-window window-entry">
+                <main class="generic-window-editor">
+                    <div class="code-area"></div>
+                </main>
+            </div>
+            
+            <!-- Right half container -->
+            <div class="tiling-node vertical">
+                <!-- Window 2: Occupies the top right quadrant -->
+                <div class="generic-window-window window-entry">
+                    <main class="generic-window-editor">
+                        <div class="code-area"></div>
+                    </main>
+                </div>
+                
+                <!-- Bottom right container -->
+                <div class="tiling-node horizontal">
+                    <!-- Window 3: Occupies the bottom middle sector -->
+                    <div class="generic-window-window window-entry">
+                        <main class="generic-window-editor">
+                            <div class="code-area"></div>
+                        </main>
+                    </div>
+                    
+                    <!-- Window 4: Occupies the bottom far-right sector -->
+                    <div class="generic-window-window window-entry">
+                        <main class="generic-window-editor">
+                            <div class="code-area"></div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </main>
-</div>
+
+    <!-- Container for future content below the fold -->
+    <div class="content-below">
+        <!-- More content can be added here -->
+    </div>
 </body>
 </html>
