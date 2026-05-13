@@ -151,3 +151,20 @@ body::-webkit-scrollbar {
   padding: 40px;
   color: white;
 }
+
+/* Attribution Footer Styling */
+.attribution-footer {
+  margin-top: 10px;
+  font-size: 10px;
+  color: rgba(205, 214, 244, 0.5); /* Semi-transparent version of --generic-window-text */
+  text-align: center;
+}
+
+.attribution-footer a {
+  color: var(--generic-window-accent);
+  text-decoration: none;
+}
+
+.attribution-footer a:hover {
+  text-decoration: underline;
+}

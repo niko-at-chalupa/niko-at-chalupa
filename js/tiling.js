@@ -75,25 +75,39 @@ let root = null; // The root of our BSP tree structure
 /**
  * Initializes the tree as a classic Dwindle spiral.
  * This sets up the initial layout for the windows by nesting splits.
+ * Now dynamically handles any number of windows present in the DOM.
  */
 function initTree() {
     const nodes = windowStates.map(s => s.node);
-    
-    // Level 3: W3 and W4 (Horizontal split)
-    // W4 is our new terminal window!
-    const n34 = new TilingNode();
-    n34.split = 'h';
-    n34.setChildren(nodes[2], nodes[3]);
-    
-    // Level 2: W2 and (W3, W4) (Vertical split)
-    const n234 = new TilingNode();
-    n234.split = 'v';
-    n234.setChildren(nodes[1], n34);
-    
-    // Level 1: W1 and (W2, W3, W4) (Horizontal split)
-    root = new TilingNode();
-    root.split = 'h';
-    root.setChildren(nodes[0], n234);
+    if (nodes.length === 0) return;
+
+    // Start with the first window as the root
+    root = nodes[0];
+    let leafToSplit = root;
+
+    // Iterate through the remaining windows, nesting them into the tree
+    for (let i = 1; i < nodes.length; i++) {
+        const newNode = new TilingNode();
+        // Alternate between horizontal and vertical splits for the spiral effect
+        newNode.split = (i % 2 !== 0) ? 'h' : 'v';
+        
+        const p = leafToSplit.parent;
+        if (!p) {
+            // We are splitting the root
+            root = newNode;
+        } else {
+            // Replace the leafToSplit in its parent with the new internal node
+            const idx = p.children.indexOf(leafToSplit);
+            p.children[idx] = newNode;
+            newNode.parent = p;
+        }
+        
+        // Split: the previous leaf goes on one side, the new window on the other
+        newNode.setChildren(leafToSplit, nodes[i]);
+        
+        // The next window will split the window we just added
+        leafToSplit = nodes[i];
+    }
 }
 
 // --- Layout Calculation ---

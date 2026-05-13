@@ -3,10 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Not Found</title>
+    <title>404 - Page Not Found</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="window" style="height: 500px; width: 250px;"></div>
+    <!-- Full viewport tiling workspace for the 404 page -->
+    <div id="workspace" class="tiling-workspace">
+        <!-- Window 1: Large 404 Error Header & Navigation -->
+        <div class="generic-window-window window-entry" id="win-1">
+            <main class="generic-window-editor">
+                <div class="code-area">
+                    <h1 style="color: var(--generic-window-accent); margin-top: 0;">404, Not Found</h1>
+                    <p>We couldn't give the resource you're requesting!!</p>
+                    <p style="margin-top: 20px;">
+                        <a href="/" style="color: var(--generic-window-accent); text-decoration: none; font-weight: bold;">
+                            &gt; Return to home directory
+                        </a>
+                    </p>
+                </div>
+            </main>
+        </div>
+
+        <!-- Window 2: Visual 404 Art -->
+        <div class="generic-window-window window-entry" id="win-2">
+            <main class="generic-window-editor" style="padding: 10px;">
+                <div class="code-area" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+                    <img src="images/sawaratsuki/404.webp" draggable="false" style="max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 5px; pointer-events: none;" />
+                    
+                    <div class="attribution-footer">
+                        Art by <a href="https://x.com/sawaratsuki1004" target="_blank" rel="noopener noreferrer">Sawaratsuki!!</a>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Window 3: Terminal window showing the HTTP error -->
+        <div class="generic-window-window terminal-window window-entry" id="win-3">
+            <main class="terminal-content">
+                <div class="terminal-line"><span class="prompt">niko@chalupa</span>:<span class="path">~</span>$ curl -I <span id="curl-url">http://chalupa.sh/unknown</span></div>
+                <div class="terminal-line">HTTP/1.1 404 Not Found</div>
+                <div class="terminal-line">Content-Security-Policy: default-src 'none'</div>
+                <div class="terminal-line">X-Content-Type-Options: nosniff</div>
+                <div class="terminal-line">Content-Type: text/html; charset=utf-8</div>
+                <div class="terminal-line">Connection: keep-alive</div>
+                <div class="terminal-line">Keep-Alive: timeout=5</div>
+                <div class="terminal-line"><span class="prompt">niko@chalupa</span>:<span class="path">~</span>$ <span class="cursor"></span></div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Container for future content below the fold -->
+    <div class="content-below">
+        <!-- More content can be added here -->
+    </div>
+
+    <!-- Tiling logic script -->
+    <script src="js/tiling.js"></script>
+
+    <!-- Script to dynamically update the curl URL -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Update the terminal's curl command with the actual requested URL
+            const urlSpan = document.getElementById('curl-url');
+            if (urlSpan) {
+                urlSpan.textContent = window.location.href;
+            }
+        });
+    </script>
 </body>
 </html>
