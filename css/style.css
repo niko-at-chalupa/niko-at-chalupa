@@ -34,7 +34,7 @@ body::-webkit-scrollbar {
   position: relative; /* Essential for absolute positioning of windows */
   box-sizing: border-box;
   padding: var(--hypr-gaps);
-  overflow: hidden;
+  overflow: auto;
 }
 
 /* Window Styling */
@@ -43,7 +43,7 @@ body::-webkit-scrollbar {
   background: var(--generic-window-bg);
   border: 2px solid var(--inactive-border);
   border-radius: var(--hypr-rounding);
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   font-family: 'JetBrains Mono', 'Fira Code', monospace;
