@@ -45,7 +45,7 @@ Here are some ideas to get you started:
 
 <br />
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=niko-at-chalupa&theme=github-compact" />
+<img src="images/window.svg" />
 
 <br />
 
