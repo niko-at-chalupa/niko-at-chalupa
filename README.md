@@ -43,13 +43,22 @@ Here are some ideas to get you started:
 
 --- -->
 
-<br />
-
 <img src="images/window.svg" />
 
-<br />
 
 ---
+
+<br />
+
+<div align="center">
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=niko-at-chalupa&theme=catppuccin-mocha)](https://git.io/streak-stats)
+
+</div>
+
+---
+
+<br />
 
 <img src="images/profile3.png" width=49% align="right"/>
 
@@ -58,9 +67,11 @@ i'm <code><img src="images/niko.png" style="display: inline; height: 1.7em; vert
 ---
 
 <div align="center">
+<br />
 <a href="https://discord.gg/3aq69Bg7cf"><img src="images/contactme.png" alt="Contact me on Discord" width=30%/>
 </a>
 <br />
+
 <code>
 i'm <code>niko_at_chalupa</code>
 on discord
