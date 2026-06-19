@@ -1,0 +1,205 @@
+html, body {
+  background-color: #151217;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --active-border: #ae84cf; 
+  --inactive-border: rgba(49, 50, 68, 0.67); 
+  --hypr-rounding: 10px;
+  --hypr-gaps: 10px;
+  
+  --generic-window-bg: rgba(17, 11, 31, 0.8); /* Ghostty background (110b1f) with 0.8 opacity */
+  --generic-window-text: #cdd6f4;
+  --generic-window-accent: #ae84cf;
+}
+
+/* Tiling Workspace */
+.tiling-workspace {
+  width: 100vw;
+  height: 100vh;
+  position: relative; /* Essential for absolute positioning of windows */
+  box-sizing: border-box;
+  padding: var(--hypr-gaps);
+  overflow: auto;
+}
+
+/* Window Styling */
+.generic-window-window {
+  position: absolute; /* Managed by js/tiling.js */
+  background: var(--generic-window-bg);
+  border: 2px solid var(--inactive-border);
+  border-radius: var(--hypr-rounding);
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  box-sizing: border-box;
+  z-index: 1;
+  cursor: grab;
+  user-select: none; /* Prevent text selection during drag */
+  
+  /* Apply blurred background for a modern, glass-like effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  /* Initial transition for state changes, JS handles movement */
+  transition: border-color 0.4s cubic-bezier(0.23, 1, 0.32, 1), 
+              box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Ghostty-inspired Terminal Window */
+.terminal-window {
+  background: rgba(17, 11, 31, 0.6) !important; /* background = 110b1f, background-opacity = 0.6 */
+  font-family: 'MesloLGS NF', 'JetBrains Mono', monospace !important; /* font-family = "MesloLGS NF" */
+}
+
+.terminal-content {
+  padding: 15px;
+  color: #cdd6f4;
+  font-size: 14px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.terminal-line {
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.prompt {
+  color: #89b4fa;
+  font-weight: bold;
+}
+
+.path {
+  color: #a6e3a1;
+}
+
+.cursor {
+  display: inline-block;
+  width: 8px;
+  height: 18px;
+  background-color: #cdd6f4;
+  vertical-align: middle;
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.generic-window-window:active {
+  cursor: grabbing;
+}
+
+.generic-window-window.dragging {
+  z-index: 100;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-color: var(--generic-window-accent);
+}
+
+.generic-window-window:hover {
+  border-color: var(--generic-window-accent);
+}
+
+.window-entry {
+  /* Snappy entrance animation */
+  animation: popin 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.window-exit {
+  /* Exit animation set to 1.2x the length of the entrance (0.25s * 1.2 = 0.3s) */
+  animation: popout 0.3s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+@keyframes popin {
+  /* 
+     Start at 0.97 scale to achieve approx 15px of growth on a standard window.
+     Opacity starts at 0 and fades in over the course of the 0.8s animation.
+  */
+  0% { transform: scale(0.97); opacity: 0; }
+  /* Finish at natural size and full visibility. */
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes popout {
+  /* Reverse of popin: shrink slightly and fade out. */
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0.97); opacity: 0; }
+}
+
+.generic-window-editor {
+  display: flex;
+  padding: 20px;
+  line-height: 1.6;
+  height: 100%;
+}
+
+.code-area {
+  flex-grow: 1;
+  font-size: 14px;
+  color: var(--generic-window-text);
+}
+
+/* Placeholder for content below the fold */
+.content-below {
+  min-height: 500px;
+  padding: 40px;
+  color: white;
+}
+
+/* Attribution Footer Styling */
+.attribution-footer {
+  margin-top: 10px;
+  font-size: 10px;
+  color: rgba(205, 214, 244, 0.5); /* Semi-transparent version of --generic-window-text */
+  text-align: center;
+}
+
+.attribution-footer a {
+  color: var(--generic-window-accent);
+  text-decoration: none;
+  /* Ensure links are relatively positioned for the hitbox pseudo-element */
+  position: relative;
+}
+
+.attribution-footer a:hover {
+  text-decoration: underline;
+}
+
+/* 
+   Hitbox Expansion:
+   We use a pseudo-element to increase the clickable area of links without 
+   affecting the document flow or visual styling. This makes links easier 
+   to click on smaller windows or high-resolution displays.
+*/
+.code-area a, .attribution-footer a {
+    position: relative;
+}
+
+.code-area a::before, .attribution-footer a::before {
+    content: "";
+    position: absolute;
+    /* Expand the hitbox by 10px in every direction */
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+    /* Ensure the pseudo-element is transparent but still captures pointer events */
+    background: transparent;
+}
