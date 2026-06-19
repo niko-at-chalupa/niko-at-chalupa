@@ -52,9 +52,15 @@ Here are some ideas to get you started:
 
 <div align="center">
   <div style="overflow-x: auto; white-space: nowrap;">
-    <!-- dark mode: username=niko-at-chalupa&show_icons=true&title_color=e6d5f8&text_color=ffffff&icon_color=e6d5f8&bg_color=281f2d&border_color=e6d5f8 -->
-    <img src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=niko-at-chalupa&layout=donut-vertical&show_icons=true&title_color=e6d5f8&text_color=ffffff&icon_color=e6d5f8&bg_color=281f2d&border_color=e6d5f8&custom_title=My Most Used Languages" alt="Pranesh's GitHub stats" />
-    <img src="https://github-readme-stats-fast.vercel.app/api?username=niko-at-chalupa&show_icons=true&title_color=e6d5f8&text_color=ffffff&icon_color=e6d5f8&bg_color=281f2d&border_color=e6d5f8&custom_title=My GitHub Stats" alt="GitHub Streak" />
+    <!-- Theme-aware GitHub stats: dark/light variants -->
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-fast.vercel.app/api/top-langs?username=niko-at-chalupa&layout=donut-vertical&show_icons=true&title_color=e6d5f8&text_color=ffffff&icon_color=e6d5f8&bg_color=281f2d&border_color=e6d5f8&custom_title=My%20Most%20Used%20Languages">
+      <img src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=niko-at-chalupa&layout=donut-vertical&show_icons=true&title_color=e6d5f8&text_color=281f2d&icon_color=e6d5f8&bg_color=ffffff&border_color=e6d5f8&custom_title=My%20Most%20Used%20Languages" alt="My Most Used Languages" />
+    </picture>
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-fast.vercel.app/api?username=niko-at-chalupa&show_icons=true&title_color=e6d5f8&text_color=ffffff&icon_color=e6d5f8&bg_color=281f2d&border_color=e6d5f8&custom_title=My%20GitHub%20Stats">
+      <img src="https://github-readme-stats-fast.vercel.app/api?username=niko-at-chalupa&show_icons=true&title_color=e6d5f8&text_color=281f2d&icon_color=e6d5f8&bg_color=ffffff&border_color=e6d5f8&custom_title=My%20GitHub%20Stats" alt="My GitHub Stats" />
+    </picture>
     
   </div>
 </div>
