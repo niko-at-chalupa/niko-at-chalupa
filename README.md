@@ -51,9 +51,12 @@ Here are some ideas to get you started:
 <br />
 
 <div align="center">
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=niko-at-chalupa&theme=catppuccin-mocha)](https://git.io/streak-stats)
-
+  <div style="overflow-x: auto; white-space: nowrap;">
+    <!-- dark mode: username=niko-at-chalupa&show_icons=true&title_color=e6d5f8&text_color=ffffff&icon_color=e6d5f8&bg_color=281f2d&border_color=e6d5f8 -->
+    <img src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=niko-at-chalupa&layout=donut-vertical&show_icons=true&title_color=e6d5f8&text_color=ffffff&icon_color=e6d5f8&bg_color=281f2d&border_color=e6d5f8&custom_title=My Most Used Languages" alt="Pranesh's GitHub stats" />
+    <img src="https://github-readme-stats-fast.vercel.app/api?username=niko-at-chalupa&show_icons=true&title_color=e6d5f8&text_color=ffffff&icon_color=e6d5f8&bg_color=281f2d&border_color=e6d5f8&custom_title=My GitHub Stats" alt="GitHub Streak" />
+    
+  </div>
 </div>
 
 ---
