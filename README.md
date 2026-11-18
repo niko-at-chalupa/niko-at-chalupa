@@ -12,8 +12,6 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-
-# Hello!!
 <!-- <div align="center">
 <strong>what i use</strong>
 <details>
@@ -43,50 +41,40 @@ Here are some ideas to get you started:
 
 --- -->
 
-<img src="images/window.svg" />
+<!--
 
+<img src="images/window.svg" />
 
 ---
 
-<br />
+-->
 
+<!--
+<br />
 <div align="center">
   <div style="overflow-x: auto; white-space: nowrap;">
-    <!-- Theme-aware GitHub stats: dark/light variants -->
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-fast.vercel.app/api/top-langs?username=niko-at-chalupa&layout=donut-vertical&show_icons=true&title_color=e6d5f8&text_color=ffffff&icon_color=e6d5f8&bg_color=281f2d&border_color=e6d5f8&custom_title=My%20Most%20Used%20Languages">
+      <source media="(prefers-color-scheme: dark)" 
       <img src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=niko-at-chalupa&layout=donut-vertical&show_icons=true&title_color=e6d5f8&text_color=281f2d&icon_color=e6d5f8&bg_color=ffffff&border_color=e6d5f8&custom_title=My%20Most%20Used%20Languages" alt="My Most Used Languages" />
     </picture>
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats-fast.vercel.app/api?username=niko-at-chalupa&show_icons=true&title_color=e6d5f8&text_color=ffffff&icon_color=e6d5f8&bg_color=281f2d&border_color=e6d5f8&custom_title=My%20GitHub%20Stats">
-      <img src="https://github-readme-stats-fast.vercel.app/api?username=niko-at-chalupa&show_icons=true&title_color=e6d5f8&text_color=281f2d&icon_color=e6d5f8&bg_color=ffffff&border_color=e6d5f8&custom_title=My%20GitHub%20Stats" alt="My GitHub Stats" />
+      <img src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=niko-at-chalupa&layout=donut-vertical&show_icons=true&title_color=e6d5f8&text_color=281f2d&icon_color=e6d5f8&bg_color=ffffff&border_color=e6d5f8&custom_title=My%20Most%20Used%20Languages" alt="My Most Used Languages" />
     </picture>
     
   </div>
 </div>
 
----
+-->
+
+
 
 <br />
 
+<!--
 <img src="images/profile3.png" width=49% align="right"/>
 
 i'm <code><img src="images/niko.png" style="display: inline; height: 1.7em; vertical-align: text-top; vertical-align: -0.5em;" alt="Niko"></code>, programmer/student who's into **web development** *(mostly backend)*, **game development** and **other stuff**!
+-->
 
----
-
-<div align="center">
-<br />
-<a href="https://discord.gg/3aq69Bg7cf"><img src="images/contactme.png" alt="Contact me on Discord" width=30%/>
-</a>
-<br />
-
-<code>
-i'm <code>niko_at_chalupa</code>
-on discord
-</code>
-</div>
-
-<br />
-<br />
-<br />
+# Hey!
+I'm Niko, a programming student. I like backend.
